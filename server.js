@@ -8,8 +8,8 @@ const date=new Date()
 const day=date.getDay()
 const hour= date.getHours()
 
-if ((day==0 || day==6) || (hour<=9 || hour>=24)) {
-  res.send("error retry next time")
+if ((day==1 || day==2) && (hour<=9 || hour>=20)) {
+  res.send("Error:Sorry retry later!")
 }else
   (next())
   }
